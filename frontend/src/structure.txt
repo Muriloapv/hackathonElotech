@@ -1,0 +1,30 @@
+src/
+├── components/
+│   ├── common/
+│   │   ├── Button/
+│   │   ├── Input/
+│   │   └── Layout/
+│   ├── auth/
+│   │   ├── LoginForm/
+│   │   └── RegisterForm/
+│   └── profile/
+│       └── DisabilityForm/
+├── pages/
+│   ├── Home/
+│   ├── Login/
+│   ├── Register/
+│   ├── Profile/
+│   └── Routes/
+├── services/
+│   ├── api.ts
+│   └── auth.ts
+├── contexts/
+│   └── AuthContext.tsx
+├── hooks/
+│   └── useAuth.ts
+├── utils/
+│   └── validation.ts
+├── styles/
+│   └── global.ts
+└── types/
+    └── index.ts 
