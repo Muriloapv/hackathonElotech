@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import {
   AppBar,
   Box,
@@ -21,6 +21,7 @@ import {
   DirectionsBus,
   Person,
   ExitToApp,
+  Map,
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -36,9 +37,12 @@ const Layout = ({ children }: LayoutProps) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const menuItems = [
-    { text: 'Início', icon: <Home />, path: '/' },
+    { text: 'Início', icon: <Home />, path: '/home' },
     { text: 'Rotas', icon: <DirectionsBus />, path: '/routes' },
     { text: 'Perfil', icon: <Person />, path: '/profile' },
+    { text: 'Dashboard Cuidador', icon: <Person />, path: '/caregiver/dashboard' },
+    { text: 'Add Usuário Assistido', icon: <Person />, path: '/caregiver/add-assisted-user' },
+    { text: 'Mapa Acessível', icon: <Map />, path: '/accessible-routes-map' },
   ];
 
   const handleNavigation = (path: string) => {
@@ -56,7 +60,6 @@ const Layout = ({ children }: LayoutProps) => {
       <List>
         {menuItems.map((item) => (
           <ListItem
-            button
             key={item.text}
             onClick={() => handleNavigation(item.path)}
           >
@@ -64,7 +67,9 @@ const Layout = ({ children }: LayoutProps) => {
             <ListItemText primary={item.text} />
           </ListItem>
         ))}
-        <ListItem button onClick={handleLogout}>
+        <ListItem
+          onClick={handleLogout}
+        >
           <ListItemIcon>
             <ExitToApp />
           </ListItemIcon>

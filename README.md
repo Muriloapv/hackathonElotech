@@ -1,7 +1,7 @@
 # Sistema de Transporte Inteligente e Inclusivo
 
 ## Visão Geral
-Sistema integrado de transporte público focado em acessibilidade e inclusão, utilizando IA e tecnologia para melhorar a mobilidade urbana para pessoas com deficiência.
+Sistema integrado de transporte público focado em acessibilidade e inclusão, utilizando IA e tecnologia para melhorar a mobilidade urbana para pessoas idoas ou com deficiência.
 
 ## Principais Funcionalidades
 
